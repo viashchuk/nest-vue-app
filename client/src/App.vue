@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-yellow-200">
-
+  <div class="bg-yellow-200 h-full w-full">
+121212
   </div>
 </template>
 
