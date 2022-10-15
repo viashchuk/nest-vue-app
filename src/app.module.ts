@@ -11,11 +11,11 @@ import { UsersModule } from './users/users.module';
         ConfigModule.forRoot({isGlobal: true}),
         TypeOrmModule.forRoot(({
             type: 'mysql',
-            host: '127.0.0.1',
-            port: 3306,
-            username: 'root',
-            password: '',
-            database: 'control-food',
+            host: process.env.DATABASE_HOST,
+            port: +process.env.DATABASE_PORT,
+            username: process.env.DATABASE_USER,
+            password: process.env.DATABASE_PASSWORD,
+            database: process.env.DATABASE_NAME,
             autoLoadEntities: true,
             synchronize: true
         })),
